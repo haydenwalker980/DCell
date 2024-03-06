@@ -1,2 +1,2 @@
 .env
-db.rb
+/config/db.rb
