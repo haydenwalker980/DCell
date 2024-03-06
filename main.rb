@@ -15,10 +15,16 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require "discorb"
+require "pg"
 
+# config
+require_relative "config/perms.rb"
+require_relative "config/strings.rb"
+require_relative "config/channels.rb"
+
+# useful vars and functions
 client = Discorb::Client.new
 thatonecolor = Discorb::Color.from_rgb(201, 0, 0)
-
 def createauthor(name, url, icon)
   return Discorb::Embed::Author.new(name, url: url, icon: icon)
 end
